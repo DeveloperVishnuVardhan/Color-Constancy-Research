@@ -19,3 +19,7 @@ We the use CNN to estimate illuminant of each patch and combine the path scores 
 * Layer-4: Flatten the 4 X 4 X 240 => 3840 => FFN with 40 neurons.
 * Layer-5: A simple Linear regressio layer with a three dimensional output.
 <br>
+
+### Codebase-structure
+
+**Models.py:** Contains the code to build the Models used in the task.
