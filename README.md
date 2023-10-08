@@ -4,21 +4,35 @@
 ### What is color constancy?
 It is the process of estimating the scene illuminant and the then correcting the Image based on it's 
 estimate to generate a new image of the scene as if it was taken under a reference light source.
-<br>
+
 **Data Preprocessing:**
 * Sample Non-Overlapping patches
 * Perform Contrast Normalization for each sample using Histogram Streching.
 
 We the use CNN to estimate illuminant of each patch and combine the path scores to obtain an illuminant estimation for the image.
-<br>
-**CNN Architecture:**
+
+**CNN Architecture**
 * The Proposed network consists of 5 layers.
 * Layer-1: Input   -> 32 X 32 X 3 Dimensional Image patch.
 * Layer-2: CONV    -> 240(1 * 1 * 3) kernels, Stride 1 -> 32 X 32 X 240.
 * Layer-3: Maxpool -> K = 8 X 8, Stride 8 -> 4 X 4 X 240.
 * Layer-4: Flatten the 4 X 4 X 240 => 3840 => FFN with 40 neurons.
 * Layer-5: A simple Linear regressio layer with a three dimensional output.
-<br>
+
+
+**Dataset used:**
+* Shi-Gehler and SFU subset.
+
+**Learning process**
+1. Resize the Images to 1200 X 1200.
+2. Extracting non-overlapping patches each of size 32 X 32.
+3. Perform contrast normalization using histogram streching.
+4. Train the Model in a 3-Fold cross validation setting.
+5. Assign illuminant ground truth to each patch associated to the Image which it belongs.(**Which we need to Figure out**)
+6. Using the Euclidean loss as loss function in this process.
+7. Fine tune the Model using Angular loss by adding knowledge about the way local estimates are 
+   pooled to generate a single global estimate for each image. (**Need to be figured out**)
+
 
 ### Codebase-structure
 
