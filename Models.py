@@ -36,13 +36,13 @@ class IlluminantEstimationCNN(nn.Module):
 
     def forward(self, x):
         x = self.conv1(x)
-        print(f"Shape after first conv:{x.shape}")
+        # print(f"Shape after first conv:{x.shape}")
         x = self.relu(x)
         x = self.pooling(x)
-        print(f"Shape after maxpool:{x.shape}")
+        # print(f"Shape after maxpool:{x.shape}")
         x = x.view(-1, 4 * 4 * 240)  # Flattening.
         x = self.fc1(x)
-        print(f"Shape after FCN:{x.shape}")
+        # print(f"Shape after FCN:{x.shape}")
         x = self.relu(x)
         x = self.fc2(x)
         return x

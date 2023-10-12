@@ -10,6 +10,7 @@ This file contain the code to the utility functions used in the project.
 import glob
 import numpy as np
 from scipy.io import loadmat
+import numpy as np
 
 
 def get_images_full_path(img_folder_path):
@@ -41,3 +42,18 @@ def load_groundtruth_illuminant(file_path):
     real_rgb = real_rgb / real_rgb[:, 1][:,
                                          np.newaxis]  # convert to chromaticity
     return real_rgb
+
+def load_data(data_path):
+    """Loads and returns the preprocessed data.
+
+    Args:
+        data_path (str): path of the dataset.
+    """
+    dataset = np.load(data_path)
+    patches = dataset['data']
+    patch_labels = dataset['patch_labels']
+    image_idx = dataset['image_idx']
+
+    return patches, patch_labels, image_idx
+
+
