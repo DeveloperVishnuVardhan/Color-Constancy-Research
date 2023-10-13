@@ -23,7 +23,7 @@ def get_images_full_path(img_folder_path):
     """
 
     images_full_path = glob.glob(
-        img_folder_path + "/*/png/*.png", recursive=True)
+        img_folder_path + "/**/*.png", recursive=True)
     images_full_path.sort(key=lambda x: x.split('/')[-1].split('.')[0])
     return images_full_path
 

@@ -142,6 +142,9 @@ def get_shigehler_patch_corners(config_file):
     patch_size = int(config_file["SHIGEHLER"]["PATCH_SIZE"])
     npatches_per_image = int(config_file["SHIGEHLER"]["NPATCHES_PER_IMAGE"])
 
+    x = get_images_full_path("/Users/karanshah/Fall2023/courses/AdvCV/HW2/Color-Constancy-Research/data")
+    print(x)
+
     images_full_path = get_images_full_path(img_folder_path=img_folder_path)
     print(len(images_full_path))
     shigehler_patch_corners = []
@@ -244,7 +247,7 @@ def main(shigehler_config):
     patches, patch_labels, image_idx = extract_shigehler_patches(
         shigehler_patch_corners, shigehler_config)
     data = normalize_patches(patches)
-    np.savez('/Users/jyothivishnuvardhankolla/Desktop/CS-7180 Advanced Perception/Color-Constancy/Data/shigehler.npz', data=data,
+    np.savez('/Users/karanshah/Fall2023/courses/AdvCV/HW2/Color-Constancy-Research/data/shigehler.npz', data=data,
              patch_labels=patch_labels, image_idx=image_idx)
 
 
