@@ -13,8 +13,21 @@ import torch.optim as optim
 from Models import IlluminantEstimationCNN
 
 
+import torch
+
 def euclidean_distance_loss(y_true, y_pred):
-    return F.pairwise_distance(y_true, y_pred, p=2).mean()
+    """
+    Compute the Euclidean distance between two tensors.
+
+    Parameters:
+    - y_true (torch.Tensor): the ground truth tensor
+    - y_pred (torch.Tensor): the predicted tensor
+    
+    Returns:
+    - torch.Tensor: the Euclidean distance between y_true and y_pred
+    """
+    return torch.sqrt(torch.sum((y_pred - y_true) ** 2, dim=-1)).mean()
+
 
 
 def main(shigehler_config):
