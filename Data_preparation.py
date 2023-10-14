@@ -239,6 +239,7 @@ def extract_shigehler_patches(shigehler_patch_corners, config_file):
     return patches, patch_labels, patch_to_image
 
 
+# This is the main-function which runs and completes the Data-preparation step. 
 def main(shigehler_config):
     shigehler_patch_corners = get_shigehler_patch_corners(shigehler_config)
     patches, patch_labels, image_idx = extract_shigehler_patches(shigehler_patch_corners, shigehler_config)

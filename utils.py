@@ -48,6 +48,8 @@ def load_data(data_path):
 
     Args:
         data_path (str): path of the dataset.
+    Returns:
+        returns the patches, patch_labels, image_idx
     """
     dataset = np.load(data_path)
     patches = dataset['data']

@@ -73,6 +73,7 @@ def compute_angular_error_stats(ang_err):
 
 
 
+# Main function that prepares the data and trains the model.
 def main(shigehler_config):
 
     # Define the processed data path

@@ -51,6 +51,7 @@ class IlluminantEstimationCNN(nn.Module):
         return x
 
 
+# A function to test the working of CNN model.
 def test():
     model = IlluminantEstimationCNN()
     print(model)
