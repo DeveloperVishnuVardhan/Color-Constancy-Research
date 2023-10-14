@@ -4,6 +4,7 @@ Authors:
 1. Jyothi Vishnu Vardhan Kolla
 2. Karan Shah
 
+Date: 09/14/2023
 This file contain the code to train the model.
 """
 import configparser
