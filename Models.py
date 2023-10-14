@@ -34,6 +34,9 @@ class IlluminantEstimationCNN(nn.Module):
         self.fc1 = nn.Linear(4 * 4 * 240, 40)
         self.fc2 = nn.Linear(40, 3)
 
+        nn.init.xavier_uniform_(self.conv1.weight)
+        nn.init.xavier_uniform_(self.fc1.weight)
+
     def forward(self, x):
         x = self.conv1(x)
         # print(f"Shape after first conv:{x.shape}")
