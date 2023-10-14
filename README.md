@@ -47,5 +47,6 @@ We the use CNN to estimate illuminant of each patch and combine the path scores 
 * Install the required Packages.
 * Adjust the paths in assests/shigehler.cfg to match your system.
 * Data is obtained at https://www2.cs.sfu.ca/~colour/data/shi_gehler/#DATA.
+* Inside my Data folder contains: png_canon1d folder, png_canon5d_1 folder, png_canon5d_2 folder, png_canon5d_3 folder, and shigehler.npz (result of post-processing)
 * In terminal: python train.py (This completes data prep and trains the model). Or seperately run python Data_preparation.py then python train.py.
 * Run the cells in visualResults.ipynb file to get the visualizations of results.
