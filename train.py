@@ -158,7 +158,7 @@ def main(shigehler_config):
             optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=0.0005)
 
             # Train your model
-            num_epochs = 1
+            num_epochs = 8
             for epoch in range(num_epochs):
                 model.train()
                 total_loss = 0.0
