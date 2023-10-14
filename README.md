@@ -36,14 +36,14 @@ We the use CNN to estimate illuminant of each patch and combine the path scores 
 * Then we apply Von-Kries Models to get the corrected Images. 
 
 ### Codebase-structure
-**Models.py:** Contains the code to build the Models used in the task.
-**Data_preparation.py** Contains the code to preprocess and prepare the data for training.
-**train.py** Contains the code to train the model.
-**utils.py** Contains all the helper functions used in the project.
-**visualResults.ipynb** Contains the code and visualizations of producing and produced results.
+* **Models.py:** Contains the code to build the Models used in the task.
+* **Data_preparation.py** Contains the code to preprocess and prepare the data for training.
+* **train.py** Contains the code to train the model.
+* **utils.py** Contains all the helper functions used in the project.
+* **visualResults.ipynb** Contains the code and visualizations of producing and produced results.
 
 ### Instructions to Execute the code.
-* Install conda and create a new virtual env
+* Install conda and create a new virtual env.
 * Install the required Packages.
 * In terminal: python train.py (This completes data prep and trains the model)
 * Run the cells in visualResults.ipynb file to get the visualizations of results.
