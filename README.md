@@ -45,5 +45,7 @@ We the use CNN to estimate illuminant of each patch and combine the path scores 
 ### Instructions to Execute the code.
 * Install conda and create a new virtual env.
 * Install the required Packages.
-* In terminal: python train.py (This completes data prep and trains the model)
+* Adjust the paths in assests/shigehler.cfg to match your system.
+* Data is obtained at https://www2.cs.sfu.ca/~colour/data/shi_gehler/#DATA.
+* In terminal: python train.py (This completes data prep and trains the model). Or seperately run python Data_preparation.py then python train.py.
 * Run the cells in visualResults.ipynb file to get the visualizations of results.
